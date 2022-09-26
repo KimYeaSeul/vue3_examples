@@ -1,15 +1,25 @@
 <template>
-    
+    <div>Hello</div>
 </template>
 
 <script>
-import { defineComponent } from '@vue/composition-api'
+import { ref, readonly, provide } from 'vue'
 
-const todos = ref([])
-
-export default defineComponent({
+export default {
+    name: 'TodoListContainer',
     setup() {
-        
+        const todos = ref([])
+        provide('todos', readonly(todos))
+        const initTodos = (init_todos) =>{
+            todos.value = init_todos
+        }
+        const addTodo = (todo, date) =>{}
+        const removeTodo = (id) =>{}
+        const completeTodo = (id) =>{}
+
+        provide('addTodo', addTodo)
+        provide('removeTodo', removeTodo)
+        provide('completeTodo', completeTodo)
     },
-})
+}
 </script>
