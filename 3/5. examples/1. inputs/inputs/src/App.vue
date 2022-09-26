@@ -26,6 +26,13 @@
       {{ country }}
     </option></select
   ><br />
+  <label>비번 : </label>
+  <input type="date" v-model="result.date" /><br />
+  <label>비번 : </label>
+  <input type="time" v-model="result.time" /><br />
+  <label>비번 : </label>
+  <input type="color" v-model="result.color" /><br />
+  <br />
   <div>
     <h3>결과</h3>
     <hr />
@@ -43,6 +50,9 @@ export default {
     const gender = 'male'
     const hobby = ['스포츠']
     const password = ''
+    const date = ''
+    const time = ''
+    const color = ''
     const country = '한국'
     const country_options = ['한국', '미국', '중국']
     const hobby_options = ['스포츠', '그림', '음악', '코딩']
@@ -54,6 +64,7 @@ export default {
       hobby,
       password,
       country,
+      date, time, color
     })
 
     return {

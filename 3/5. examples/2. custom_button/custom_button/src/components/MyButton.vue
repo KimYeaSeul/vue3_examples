@@ -11,7 +11,7 @@ export default {
     type: {
       default: 'button',
       validator: (value) => {
-        const allowed = ['button', 'submit', 'reset']
+        const allowed = ['button', 'submit', 'reset','switch']
         return allowed.includes(value)
       },
     },

@@ -5,12 +5,8 @@
         {{ head }}
       </th>
     </tr>
-    <tr v-for="(row, row_index) in rows" :key="'row-' + row_index">
-      <td
-        v-for="(data, data_index) in row"
-        :key="'data-' + data_index"
-        :colspan="data.colspan || 1"
-      >
+    <tr v-for="(row, row_index) in rows" :key="'row-'+row_index">
+      <td v-for="(data, data_index) in row" :key="'data-'+data_index" :colspan="data.colspan || 1">
         {{ data.data }}
       </td>
     </tr>
@@ -19,6 +15,7 @@
 
 <script>
 export default {
+  
   props: ['header', 'rows'],
 }
 </script>
